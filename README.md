@@ -1,10 +1,6 @@
 # hot-air-balloon
 
-HTML：用於結構化網頁內容。 
-
-CSS：用於定義網頁的外觀和樣式，包括使用CSS動畫來實現樣式變化。  
-
-JavaScript：用於實現互動和動態效果，包括網頁的事件處理和DOM操作。  
+HTML、CSS‘JavaScript用於實現網頁排版和動態效果，包括網頁的事件處理和DOM操作。  
 
 AOS.js：AOS是一個用於滾動時動畫效果的JavaScript庫，這裡用於實現滾動動畫效果。  
 
