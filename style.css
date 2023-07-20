@@ -187,6 +187,7 @@ section h1:hover {
 .ticket.active {
   transition: 0.6s;
   transform: scale(1);
+  z-index: 3;
 }
 .ticket .x {
   width: 5vh;
@@ -262,6 +263,9 @@ section h1:hover {
 }
 .left-content button:hover {
   background-color: #a36630;
+}
+.left-content button:active, .left-content button:link {
+  color: #1c2d50;
 }
 
 .right-content {
@@ -343,7 +347,6 @@ section h1:hover {
     width: auto;
     writing-mode: horizontal-tb;
     color: #1c2d50;
-    z-index: 2;
   }
   .balloon {
     width: 10rem;
