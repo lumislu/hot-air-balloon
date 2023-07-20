@@ -261,6 +261,7 @@ section {
     padding: 1rem 4rem;
     border-radius: 2rem;
     background-color: #ed964b;
+    color: #000;
     cursor: pointer;
     font-size: 18px;
     &:hover {
@@ -268,7 +269,7 @@ section {
     }
     &:active,
     &:link {
-      color: #1c2d50;
+      color: #000;
     }
   }
 }
