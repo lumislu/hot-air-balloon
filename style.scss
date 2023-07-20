@@ -1,0 +1,414 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Noto Sans JP", sans-serif;
+  transition: 1s ease;
+}
+
+main {
+  padding: 4rem;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #fa9ea4 0%, rgba(250, 158, 164, 0) 100%);
+}
+section {
+  width: 100%;
+  max-width: 1080px;
+  background: url("assets/bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 4rem;
+  gap: 5rem;
+  box-shadow: -30px 30px 160px 0px #2c2331;
+  border-radius: 6rem;
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    width: 382px;
+    height: 144px;
+    background: linear-gradient(
+      180deg,
+      #ff7a00 0%,
+      rgba(221, 154, 54, 0.73) 77.08%,
+      rgba(255, 165, 31, 0) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: color-dodge;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+  gap: 1.2rem;
+
+  & .dates {
+    & .date {
+      font-size: 64px;
+      & span {
+        color: #a19292;
+        font-size: 26px;
+        font-weight: 700;
+        background-color: #fff;
+        border-radius: 50%;
+        padding: 1px 7px;
+      }
+    }
+  }
+  & .des {
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    writing-mode: vertical-rl;
+    & p {
+      letter-spacing: 4px;
+    }
+  }
+}
+.balloon {
+  width: 30rem;
+  position: absolute;
+  right: 5rem;
+  top: 20rem;
+  border-radius: 50%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: left-right 5s ease-in-out infinite;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.bottom-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+.purchase {
+  font-size: 24px;
+  text-align: center;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  & button {
+    font-size: 16px;
+    color: #ffa730;
+    padding: 0.75rem 2.25rem;
+    border-radius: 2rem;
+    background: #1d3159;
+    box-shadow: 1px 1px 10px rgb(187, 188, 190) inset;
+    cursor: pointer;
+    &:hover {
+      background-color: #283f6d;
+      box-shadow: 0px 0px 50px rgba(236, 232, 230, 0.576),
+        1px 1px 10px rgba(236, 236, 236, 0.25) inset;
+    }
+  }
+}
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px;
+  color: #ffcf23;
+  font-weight: 100;
+  gap: 0.75rem;
+  & h3 {
+    font-weight: 300;
+    font-size: 26px;
+    color: #ffffff;
+  }
+  & .tags {
+    display: flex;
+    gap: 2rem;
+    font-style: italic;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  & a {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    &:hover {
+      background-color: #ffffff6c;
+    }
+  }
+}
+
+.ticket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 100px #283f6d;
+  background-color: #fff;
+  width: 800px;
+  height: 850px;
+  padding: 2rem;
+  border-radius: 4rem;
+  position: absolute;
+
+  transform: scale(0);
+
+  &.active {
+    animation: throw-up 0.5s ease-in-out;
+    transform: scale(1);
+  }
+  & .x {
+    width: 5vh;
+    height: 5vh;
+    font-weight: 600;
+    font-size: 3vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #c7c5c576;
+    }
+  }
+}
+.left-content {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-direction: column;
+  font-weight: 500;
+  & h1 {
+    color: #000;
+    font-size: 80px;
+    font-weight: 900;
+  }
+  & .ticket-info {
+    font-size: 16px;
+  }
+  & .notice {
+    font-size: 14px;
+    color: #770000;
+  }
+  & .ticket-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    & img {
+      cursor: pointer;
+    }
+    & input {
+      border: 1px solid rgb(96, 94, 94);
+      border-radius: 1rem;
+      width: 5rem;
+      text-align: center;
+      line-height: 2rem;
+    }
+  }
+  & .total {
+    margin: 0 auto;
+    span {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+  }
+  & button {
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    background-color: #ed964b;
+    cursor: pointer;
+    font-size: 18px;
+    &:hover {
+      background-color: #a36630;
+    }
+  }
+}
+.right-content {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes throw-up {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 2rem;
+  }
+
+  .slogan {
+    & h3 {
+      font-size: 16px;
+    }
+    & .tags {
+      gap: 1rem;
+    }
+  }
+  .balloon {
+    width: 25rem;
+    right: 1rem;
+    top: 20rem;
+  }
+  .ticket {
+    width: 80%;
+    height: 40%;
+    padding: 2rem;
+  }
+  .left-content {
+    gap: 1rem;
+    & h1 {
+      font-size: 6vw;
+    }
+  }
+}
+@media (max-width: 500px) {
+  main {
+    gap: 2rem;
+  }
+  section {
+    padding: 3rem;
+    gap: 1rem;
+    h1 {
+      font-size: 30px;
+      width: 100%;
+    }
+  }
+
+  .info {
+    font-size: 26px;
+
+    & .dates {
+      & .date {
+        font-size: 54px;
+        & span {
+          font-size: 20px;
+        }
+      }
+    }
+    & .des {
+      font-size: 14px;
+      width: auto;
+      writing-mode: horizontal-tb;
+      color: #1c2d50;
+      z-index: 2;
+    }
+  }
+  .balloon {
+    width: 10rem;
+    right: 0rem;
+    top: 22rem;
+  }
+  .purchase {
+    margin-top: 10rem;
+    font-size: 16px;
+    gap: 2rem;
+    height: 10vh;
+  }
+  .slogan {
+    padding: 1rem;
+    & h3 {
+      font-size: 16px;
+      text-align: center;
+    }
+    & .tags {
+      font-size: 12px;
+      gap: 1rem;
+    }
+  }
+  .ticket {
+    width: 90%;
+    height: 80%;
+    padding: 1rem;
+    flex-direction: column;
+    border-radius: 2rem;
+  }
+  .left-content {
+    flex: 2;
+    gap: 1rem;
+    & h1 {
+      font-size: 6vw;
+    }
+    & button {
+      margin: 0 auto;
+      padding: 0.75rem 2.25rem;
+      border-radius: 2rem;
+      background-color: #ed964b;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+  .right-content {
+    flex: 1;
+    height: 50%;
+  }
+}

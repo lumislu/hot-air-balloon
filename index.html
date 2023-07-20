@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hot Air Balloon Adventure" />
+    <meta
+      name="keywords"
+      content="HTML,CSS,JavaScript,Hot-Air-Balloon,website"
+    />
+    <title>Hot Air Balloon Adventure</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="assets/logo.png" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="container">
+        <h1 data-aos="zoom-in">Hot Air Balloon Adventure</h1>
+        <div class="info">
+          <div class="dates" data-aos="fade-up">
+            <p class="year">2023</p>
+            <p class="date">7.20 <span>六</span></p>
+            <p class="time">9:00 - 18:00</p>
+            <p class="location">花東縱谷平原</p>
+          </div>
+          <div class="des" data-aos="zoom-in-right">
+            <p>準備好迎接一場難忘的熱氣球體驗嗎?</p>
+            <p>感受自由翱翔的美妙感覺。</p>
+            <p>我們誠摯地邀請您加入我們的熱氣球活動，一同飛越蔚藍天際，</p>
+            <p>無論您是親歷者還是初次體驗，這都是一場您絕對</p>
+            <p>不想錯過的熱氣球狂歡！快來參加我們的活動，與</p>
+            <p>摯愛共度難忘時光！</p>
+          </div>
+          <div class="balloon" data-aos="fade-up-left">
+            <img src="assets/balloon.png" alt="balloon" />
+          </div>
+        </div>
+        <div class="bottom-text">
+          <div class="purchase">
+            <h2 data-aos="fade-up">熱氣球狂歡！ <br />參加我們的精彩活動！</h2>
+            <button class="order">立即訂購</button>
+          </div>
+          <div class="slogan" data-aos="fade-up">
+            <p>HotAirBalloonCarvnival</p>
+            <h3>刺激的熱氣球飛行體驗，您將親身體驗飄浮在天空的感覺</h3>
+            <div class="tags">
+              <p>#HighFlying</p>
+              <p>#MagicalAdventure</p>
+              <p>#SpectacularEvent</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer" data-aos="zoom-out-down">
+          <a href="mailto:name@gmail.com"
+            ><img src="assets/email.png" alt=""
+          /></a>
+          <a href="tel:+91123-456-7890">
+            <img src="assets/phone.png" alt=""
+          /></a>
+          <a href="https://twitter.com/">
+            <img src="assets/twitter.png" alt="twitter"
+          /></a>
+        </div>
+      </section>
+      <div class="ticket">
+        <div class="x">X</div>
+        <div class="left-content">
+          <h1>Ready to join us ?</h1>
+          <div class="ticket-info">
+            <p>熱氣球奇幻之旅 - 花東縱谷平原</p>
+            <p>地點：花東縱谷平原</p>
+            <p>日期：2023年七月二十日 (星期六)</p>
+            <p>時間：上午九點 至 晚上六點</p>
+            <p>票價：$300/人</p>
+          </div>
+          <div class="notice">
+            <p>重要提示：</p>
+            <ul>
+              <li>請務必攜帶身份證明文件進行登記。</li>
+              <li>為確保您的安全，請遵從工作人員指示。</li>
+              <li>活動期間禁止攜帶危險物品。</li>
+              <li>如遇惡劣天氣，活動將順延。</li>
+            </ul>
+          </div>
+          <p>購買張數</p>
+          <div class="ticket-number">
+            <img class="increase" src="assets/increase.png" alt="" />
+            <input class="number" type="text" placeholder="0" />
+            <img class="decrease" src="assets/decrease.png" alt="" />
+          </div>
+          <p class="total">總金額: <span class="total-price">NT$0</span></p>
+          <button class="buyticket">確認購買</button>
+        </div>
+        <div class="right-content">
+          <img src="assets/card.png" alt="" />
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
