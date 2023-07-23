@@ -7,13 +7,14 @@ const order = document.querySelector(".order");
 const totalPrice = document.querySelector(".total-price");
 const closeticket = document.querySelector(".x");
 
+const ticketPrice = 300;
 increase.addEventListener("click", () => {
   number.value++;
-  totalPrice.textContent = "NT$" + number.value * 300;
+  totalPrice.textContent = "NT$" + number.value * ticketPrice;
 });
 decrease.addEventListener("click", () => {
   number.value <= 0 ? number.value : number.value--;
-  totalPrice.textContent = "NT$" + number.value * 300;
+  totalPrice.textContent = "NT$" + number.value * ticketPrice;
 });
 
 buyticket.addEventListener("click", () => {
@@ -26,6 +27,10 @@ order.addEventListener("click", () => {
 
 closeticket.addEventListener("click", () => {
   ticket.classList.remove("active");
+});
+number.addEventListener("change", (e) => {
+  let i = number.value;
+  totalPrice.textContent = "NT$" + number.value * ticketPrice;
 });
 
 AOS.init();

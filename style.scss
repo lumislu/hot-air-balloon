@@ -238,6 +238,8 @@ section {
     justify-content: center;
     width: 100%;
     gap: 1rem;
+    user-select: none;
+    -webkit-user-select: none;
     & img {
       cursor: pointer;
     }
